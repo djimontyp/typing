@@ -1,0 +1,95 @@
+site_name: Typing
+site_url: https://djimontyp.github.io/typing/
+nav:
+  - Трохи тексту:
+      - Про типізацію взагалі: index.md
+      - Про поступову типізацію: gradual.md
+      - Качина та номінальна типізація: duck_and_nominal.md
+  - Зберігання аннотацій: annotations.md
+  - API коллекцій: collections.md
+  - Типи варті уваги: typing.md
+  - Протокол: protocol.md
+  - Перевантаження: functions.md
+  - Порівняння продуктивності: performance.md
+
+theme:
+  icon:
+    logo: fontawesome/brands/python
+  language: uk
+  name: material
+  features:
+    - navigation.instant # Коли ввімкнено, навігація відображається при завантаженні сторінки
+    # - navigation.indexes # Коли ввімкнено, відображається індекс навігації
+    - navigation.path # Коли ввімкнено, відображається шлях навігації
+    - navigation.expand # Коли розширення ввімкнено, ліва бічна панель за замовчуванням розгорне всі підрозділи
+    # - navigation.sections # Коли ввімкнено, відображається кнопка "Зміст"
+    - navigation.top # Коли ввімкнено, відображається кнопка "Вгору"
+    - toc.follow # Коли ввімкнено слідування прив'язки для змісту
+    - search.suggest # Коли ввімкнено, відображається підказка пошуку
+    - search.highlight
+    - content.tabs.link # Коли ввімкнено, відображається кнопка "Посилання" для вкладок
+    - content.code.annotation # Коли ввімкнено, відображається кнопка "Анотація" для блоків коду
+    - content.code.copy # Коли ввімкнено, відображається кнопка "Копіювати" для блоків коду
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: lime
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: blue grey
+      accent: light green
+
+plugins:
+  - search
+  - social
+  - mkdocstrings
+
+extra:
+  analytics:
+    provider: google
+    property: G-L5S0GP1JFF
+  social:
+    - icon: material/github
+      link: https://github.com/djimontyp
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/maks-naumenko/
+
+markdown_extensions:
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - css/termynal.css
+  - css/custom.css
+extra_javascript:
+  - js/termynal.js
+  - js/custom.js
+
+copyright: |
+  &copy; 2023 <a href="https://maks-naumenko.com"  target="_blank" rel="noopener">Maks Naumenko</a>
